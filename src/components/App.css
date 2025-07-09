@@ -1,0 +1,188 @@
+/* 전체 컨테이너 */
+.todo-container {
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: 1.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+}
+
+/* 제목 */
+.todo-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #333;
+    text-align: center;
+}
+
+/* 날짜 */
+.todo-date {
+    color: #666;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* 입력 폼 */
+.todo-form {
+    display: flex;
+    margin-bottom: 1.25rem;
+    gap: 0.5rem;
+}
+
+.todo-input {
+    flex-grow: 1;
+    padding: 0.55rem 0.75rem;
+    font-size: 1.1rem;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.todo-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* 추가 버튼 */
+.todo-button {
+    padding: 0.55rem 1.2rem;
+    font-size: 1.1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.todo-button:hover {
+    background-color: #0056b3;
+}
+
+/* 할 일 리스트 */
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 할 일 아이템 */
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid #e5e5e5;
+    gap: 0.75rem;
+}
+
+/* 완료된 아이템 텍스트 */
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* 할 일 텍스트 */
+.todo-text {
+    flex-grow: 1;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.05rem;
+    color: #222;
+    transition: color 0.3s ease;
+}
+
+.todo-text:hover {
+    color: #007bff;
+}
+
+.todo-text.editing {
+    cursor: default;
+}
+
+/* 수정용 인풋 */
+.todo-edit-input {
+    flex-grow: 1;
+    padding: 0.4rem 0.6rem;
+    font-size: 1.05rem;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.todo-edit-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* 작은 버튼들 */
+.todo-btn-small {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    font-size: 0.95rem;
+    padding: 0.15rem 0.3rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.todo-btn-small:hover {
+    background-color: #e7f0ff;
+}
+
+.todo-btn-delete {
+    color: #dc3545;
+}
+
+.todo-btn-delete:hover {
+    background-color: #fbeaea;
+    color: #a71d2a;
+}
+
+/* 체크박스 스타일 개선 (선택사항) */
+.todo-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* 반응형: 화면이 480px 이하일 때 */
+@media (max-width: 480px) {
+    .todo-container {
+        margin: 1rem 0.5rem;
+        padding: 1rem 0.75rem;
+    }
+
+    .todo-title {
+        font-size: 1.5rem;
+    }
+
+    .todo-input {
+        font-size: 1rem;
+        padding: 0.5rem 0.6rem;
+    }
+
+    .todo-button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .todo-text,
+    .todo-edit-input {
+        font-size: 1rem;
+    }
+
+    .todo-btn-small {
+        font-size: 0.85rem;
+        margin-left: 0.3rem;
+        padding: 0.1rem 0.2rem;
+    }
+}
