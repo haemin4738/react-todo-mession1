@@ -9,7 +9,7 @@
 -    할 일 추가, 수정, 삭제
 -    할 일 완료 여부 체크
 -    `localStorage` 기반 데이터 저장
--     `TypeScript` 사용
+-    `TypeScript` 사용
 -    컴포넌트/로직 분리 및 커스텀 Hook 구조화
 -    CSS를 통한 반응형 UI
 
